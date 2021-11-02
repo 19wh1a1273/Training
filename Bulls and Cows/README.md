@@ -8,12 +8,19 @@ Given the secret number secret and your friend's guess guess, return the hint fo
 
 The hint should be formatted as "xAyB", where x is the number of bulls and y is the number of cows. Note that both secret and guess may contain duplicate digits.
 
+
 char * getHint(char * secret, char * guess){
+
     int count[10] = {0};
+    
     int i = 0, len = strlen(secret);
+    
     int bulls = 0, cows = 0;
+    
     char *ret = NULL;
+    
     unsigned int bulldigits = 1, cowdigits = 1, outlen = 0;
+    
 
     for (i = 0; i < len; i++) {
         int digit = secret[i] - '0';
