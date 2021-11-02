@@ -40,7 +40,7 @@ Constraints:
 secret.length == guess.length
 secret and guess consist of digits only.
 
-********************Code********************************
+********************Code:-*****
 char * getHint(char * secret, char * guess){
 
     int count[10] = {0};
