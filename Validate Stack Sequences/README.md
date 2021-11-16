@@ -33,9 +33,10 @@ Constraints:
 Solution:
 -----------
 
-
 class Solution {
+
 public:
+
     bool validateStackSequences(vector<int>& pushed, vector<int>& popped) {
         stack<int> stck;
         int i = 0;
