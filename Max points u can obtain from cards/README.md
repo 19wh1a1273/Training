@@ -74,27 +74,46 @@ public:
    ---
    
    #include<bits/stdc++.h>
-   
 using namespace std;
 
 int main()
+
 {
+
     int n;
+    
     cin>>n;
+    
     int arr[n],k,sum=0,ans;
+    
     for(int i=0;i<n;i++){
+    
         cin>>arr[i];
+        
     }
+    
     cout<<"k=";
+    
     cin>>k;
+    
     for(int i=0;i<k;i++)
+    
         sum = sum+arr[i];
+        
     ans = sum;
+    
     for(int i=0;i<k;i++){
+    
         sum = sum-arr[k-i-1];
+        
         sum = sum+arr[n-i-1];
+        
         ans = max(sum,ans);
+        
     }
+    
     cout<<ans;
+    
     return 0;
+    
 }
