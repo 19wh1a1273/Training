@@ -31,29 +31,24 @@ Output: [0,1]
 
 ***solution:-*********************************************
 
-class Solution {
+#include<bits/stdc++.h>
 
-public:
+using namespace std;
 
-    vector<int> twoSum(vector<int>& nums, int target)
-    
-    {
-    
-        int n= nums.size();
-	
-        int i,j;
-	
-    for(i=0;i<n;i++)
-    
-    {
-    
-    for(j=i+1;j<n;j++)
-    
-    if(nums[i]+nums[j] == target)
-    
-        return{i,j};
+int main(){
+    int n,target;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
     }
-        return{-1,1} ;
+    cin>>target;
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            if(arr[i]+arr[j]==target)
+                cout<<"["<<i<<","<<j<<"]"<<endl;
+        }
     }
-};
+    return 0;
+}
 
