@@ -36,6 +36,7 @@ Output: [0,1]
 using namespace std;
 
 int main(){
+
     int n,target;
     cin>>n;
     int arr[n];
@@ -49,6 +50,8 @@ int main(){
                 cout<<"["<<i<<","<<j<<"]"<<endl;
         }
     }
+    
     return 0;
+    
 }
 
