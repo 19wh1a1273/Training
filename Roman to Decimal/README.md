@@ -102,8 +102,11 @@ int romanToDecimal(string str){
     return sum;
 }
 int main(){
+
     string str;
+    
     cin>>str;
+    
     cout<<romanToDecimal(str)<<endl;
     
     return 0;
