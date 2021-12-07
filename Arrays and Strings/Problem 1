@@ -1,1 +1,39 @@
+Scoreboard queries
+-------
+INPUT:
+1
+4 1
+2 1 1 5
+2 3
 
+OUTPUT:
+5
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t,n,q,l,r,x;
+    cin>>t;
+    while(t--){
+        cin>>n>>q;
+        vector<int>arr;
+        int count=n;
+        for(int i=0;i<n;i++){
+            cin>>x;
+            arr.push_back(x);
+        }
+        while(q--){
+            cin>>l>>r;
+            int ele=arr[l];
+            arr[l]=r;
+        }
+        sort(arr.begin(),arr.end());
+        for(int i=0;i<n-1;i++){
+            if(arr[i]==arr[i+1])
+                count--;
+        }
+        cout<<count+1<<endl;
+        t--;
+    }
+    return 0;
+}
